@@ -1,14 +1,6 @@
 pipeline {
     agent any
 
- 
-
-    environment {
-        PATH = "/System;./opt/anaconda3/lib/python3.8/;/Applications/Docker.app/Contents/Resources/bin"
-    }
-
- 
-
     stages {
         stage('Building') {
             steps {
