@@ -4,7 +4,7 @@ pipeline {
  
 
     environment {
-        PATH = "/System;/Applications/Python 3.9;/Applications/Docker.app/Contents/Resources/bin"
+        PATH = "/System;./opt/anaconda3/lib/python3.8/;/Applications/Docker.app/Contents/Resources/bin"
     }
 
  
