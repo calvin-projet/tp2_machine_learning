@@ -15,14 +15,14 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                sh 'pip install -r requirements.txt'
-                sh 'python test_main.py'
+                sh "pip install -r requirements.txt"
+                sh "python test_main.py"
             }
         }
         stage('Deploying') {
             steps {
-                sh 'docker build -t jenkins_app .'
-                sh 'docker run -d jenkins_app'
+                sh "docker build -t jenkins_app ."
+                sh "docker run -d jenkins_app"
             }
         }
     }
