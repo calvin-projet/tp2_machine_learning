@@ -17,14 +17,14 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                bat 'python -m pip install Flask'
-                bat 'python test_main.py'
+                sh 'python -m pip install Flask'
+                sh 'python test_main.py'
             }
         }
         stage('Deploying') {
             steps {
-                bat 'docker build -t jenkins_app .'
-                bat 'docker run -d jenkins_app'
+                sh 'docker build -t jenkins_app .'
+                sh 'docker run -d jenkins_app'
             }
         }
     }
