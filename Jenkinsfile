@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                sh "pip install -r requirements.txt"
+                sh "python -m pip install Flask"
                 sh "python test_main.py"
             }
         }
